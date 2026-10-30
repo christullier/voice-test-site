@@ -1,6 +1,6 @@
 # voice-test-site
 
-Privacy policy, terms, and support pages for the voice-test iOS app, served with GitHub Pages.
+Privacy policy, terms, and support pages for the MemoHelper iOS app, served with GitHub Pages.
 
 - Privacy Policy: https://christullier.github.io/voice-test-site/privacy.html
 - Support: https://christullier.github.io/voice-test-site/support.html
