@@ -13,3 +13,17 @@ The app bundles the source texts. After you change them in the app, regenerate t
 ```bash
 ./tools/build.sh ../voice-test/voice-test/Resources/Legal
 ```
+
+## Update the screenshots
+
+The home page uses the App Store captures from the app repository. After you make new captures, copy them again:
+
+```bash
+for n in journal transcript playing-dark search related importing settings; do
+  src=../voice-test/scripts/app-store-screenshots/captures/$n.png
+  magick "$src" -resize x1400 /tmp/$n.png
+  sips -s format jpeg -s formatOptions 80 /tmp/$n.png --out img/$n.jpg
+  cwebp -q 78 -quiet /tmp/$n.png -o img/$n.webp
+  avifenc -q 62 -s 4 /tmp/$n.png img/$n.avif
+done
+```
