@@ -208,3 +208,37 @@ footer nav { display: flex; gap: 1rem; }
   .band:not(.hero) .phone { box-shadow: 0 0 0 2px #3a3a3d; }
   .sticker.bottom { bottom: auto; top: 80%; }
 }
+
+/* Feature cards: a grid of six cards with cropped phones */
+
+.features { padding: 3rem 1rem; }
+.grid { max-width: 74rem; margin: 0 auto; display: grid; gap: 1rem; grid-template-columns: 1fr; }
+@media (min-width: 44rem) { .grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 68rem) { .grid { grid-template-columns: repeat(3, 1fr); } }
+.card { position: relative; overflow: hidden; border-radius: 28px; padding: 2rem 1.5rem 0; text-align: center;
+  display: flex; flex-direction: column; align-items: center; }
+.card.black { background: var(--night); }
+.card.red { background: var(--red); }
+.card h3 { margin: 0; font-size: clamp(1.8rem, 6vw, 2.1rem); line-height: 1.05; letter-spacing: -0.03em; }
+.card .lead { font-size: 1rem; line-height: 1.45; margin: 0.75rem auto 0; max-width: 22rem; }
+.card .phone-wrap { width: 272px; height: 330px; margin-top: 1.75rem; }
+@media (max-width: 43.99rem) {
+  .features { padding: 1rem 0.75rem 2.5rem; }
+  .grid { gap: 0.75rem; }
+  .card { padding-top: 1.75rem; }
+  .card .phone-wrap { height: 290px; margin-top: 1.5rem; }
+}
+.card .phone { box-shadow: 0 0 0 2px #3a3a3d; }
+.card .sticker { font-size: 0.9rem; border-width: 4px; padding: 0.45rem 0.8rem; }
+.card .sticker.top { right: -14%; }
+.card .sticker.bottom { bottom: auto; top: 86%; }
+
+@media (max-width: 51.99rem) {
+  .hero { padding-bottom: 0; }
+  .hero .chips-row { display: none; }
+  .hero .phone-wrap { height: 470px; }
+  .hero .phone { box-shadow: 0 0 0 2px #3a3a3d; }
+  .ways { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 0.6rem; }
+  .ways span:nth-child(even) { align-self: auto; }
+  .ways span { font-size: 1.05rem; padding: 0.65rem 1.1rem; }
+}
